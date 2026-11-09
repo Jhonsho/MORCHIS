@@ -10,17 +10,31 @@
 </head>
 <body>
 <main>
-<section class="hero" aria-label="Bienvenida a MORCHIS">
-<img class="hero-art" src="assets/386B07B6-5549-4CD6-ACEB-2E2272114A88.png" alt="Ilustración de portada de MORCHIS en un bosque otoñal">
-
+<section class="hero" aria-label="Portada MORCHIS">
+<img class="hero-art" src="assets/386B07B6-5549-4CD6-ACEB-2E2272114A88.png" alt="Bosque otoñal MORCHIS con tres runas nórdicas">
+<button class="rune-hit rune-love" data-open="love" aria-label="Abrir Amor, runa Gebo"></button>
+<button class="rune-hit rune-fertility" data-open="fertility" aria-label="Abrir Fertilidad, runa Berkano"></button>
+<button class="rune-hit rune-life" data-open="life" aria-label="Abrir Vida, runa Dagaz"></button>
+<p class="tap-hint">Toca una de las tres runas para entrar</p>
 </section>
-<section class="memories" id="nuestro-mundo">
-<p class="eyebrow">PARA TI, MORCHIS</p><h2>Nuestro pequeño mundo</h2>
-<p class="intro">Aquí iré guardando palabras, imágenes y momentos que quiero compartir contigo.</p>
-<div class="memory-grid">
-<article class="memory-card"><span class="symbol">✉</span><h3>Mensajes</h3><p>Palabras que quiero que puedas leer una y otra vez.</p><span class="coming">Próximamente</span></article>
-<article class="memory-card"><span class="symbol">♡</span><h3>Fotografías</h3><p>Pequeños instantes que merecen quedarse para siempre.</p><span class="coming">Próximamente</span></article>
-<article class="memory-card"><span class="symbol">♫</span><h3>Audios</h3><p>Mi voz, historias y recuerdos para escucharlos cuando quieras.</p><span class="coming">Próximamente</span></article>
-</div><footer>Hecho con cariño, para ti. <span>🍁</span></footer>
-</section></main><script src="script.js"></script>
+<section class="content-section" id="life" hidden>
+<button class="back" data-home>← Volver a las runas</button><p class="eyebrow">DAGAZ · NUEVOS COMIENZOS</p><h1>Vida</h1>
+<p class="section-intro">Un espacio para guardar las palabras que quiero compartir contigo.</p>
+<textarea id="messageText" placeholder="Escribe aquí tu mensaje..." aria-label="Tu mensaje"></textarea>
+<button class="action" id="saveMessage">Guardar mensaje</button><p class="save-note" id="messageStatus" aria-live="polite">El mensaje se guarda en este navegador.</p>
+</section>
+<section class="content-section" id="love" hidden>
+<button class="back" data-home>← Volver a las runas</button><p class="eyebrow">GEBO · AMOR Y UNIÓN</p><h1>Amor</h1>
+<p class="section-intro">Una voz, una canción o un recuerdo para escuchar cuando quieras.</p>
+<label class="file-label">Seleccionar audio <input id="audioFile" type="file" accept="audio/*"></label>
+<audio id="audioPlayer" controls hidden></audio><p class="save-note" id="audioStatus" aria-live="polite">Selecciona un archivo de audio desde tu dispositivo.</p>
+</section>
+<section class="content-section" id="fertility" hidden>
+<button class="back" data-home>← Volver a las runas</button><p class="eyebrow">BERKANO · FERTILIDAD Y CRECIMIENTO</p><h1>Nuestros recuerdos</h1>
+<p class="section-intro">Una galería para reunir fotografías de nuestros momentos.</p>
+<label class="file-label">Añadir fotografías <input id="photoFiles" type="file" accept="image/*" multiple></label>
+<div class="gallery" id="gallery" aria-live="polite"></div>
+<p class="save-note">Las fotografías se muestran en este navegador. Para que estén disponibles para todos los visitantes habrá que incorporarlas al repositorio o conectar almacenamiento en línea.</p>
+</section>
+</main><script src="script.js"></script>
 </body></html>
