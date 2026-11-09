@@ -23,14 +23,6 @@ document.getElementById('saveMessage').addEventListener('click',()=>{
  try{localStorage.setItem('morchis-message',message.value);document.getElementById('messageStatus').textContent='Mensaje guardado en este navegador.';}
  catch(error){document.getElementById('messageStatus').textContent='No se pudo guardar el mensaje en este navegador.';}
 });
-let audioUrl;
-document.getElementById('audioFile').addEventListener('change',event=>{
- const file=event.target.files[0];if(!file)return;
- if(audioUrl)URL.revokeObjectURL(audioUrl);
- audioUrl=URL.createObjectURL(file);
- const player=document.getElementById('audioPlayer');player.src=audioUrl;player.hidden=false;
- document.getElementById('audioStatus').textContent=file.name+' · Pulsa play para escucharlo.';
-});
 document.getElementById('photoFiles').addEventListener('change',event=>{
  const gallery=document.getElementById('gallery');
  [...event.target.files].forEach(file=>{
