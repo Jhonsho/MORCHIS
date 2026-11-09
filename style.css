@@ -13,3 +13,11 @@
 .dedication-label{margin:0 0 1.4rem}
 .dedication p:not(.dedication-label){font:400 clamp(1.15rem,3.5vw,1.35rem)/1.65 'Cormorant Garamond',serif;color:#f2dfc7;margin:0 0 1.1rem}
 .dedication p:last-child{margin-bottom:0}
+
+/* Galería de recuerdos: alternancia de fotografía y texto */
+.memory-list{display:flex;flex-direction:column;gap:2rem;width:min(100%,900px);margin:2.5rem auto}
+.memory-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(1rem,4vw,2.5rem);padding:clamp(.8rem,2.5vw,1.4rem);border:1px solid #8f6949;border-radius:18px;background:linear-gradient(145deg,#38251bde,#24170fe8);box-shadow:0 12px 35px #10090555;text-align:left}
+.memory-card:nth-child(even) img{order:2}
+.memory-card img{display:block;width:100%;height:clamp(220px,34vw,360px);object-fit:cover;border-radius:12px;border:1px solid #a77b52}
+.memory-card p{margin:0;color:#f2dfc7;font:400 clamp(1.2rem,3vw,1.6rem)/1.65 'Cormorant Garamond',serif}
+@media(max-width:640px){.memory-card{grid-template-columns:1fr;gap:1rem}.memory-card:nth-child(even) img{order:0}.memory-card img{height:auto;max-height:360px;aspect-ratio:4/3}.memory-card p{font-size:1.3rem}}
