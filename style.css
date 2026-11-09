@@ -4,3 +4,12 @@
 .falling-leaf{position:absolute;top:-12vh;left:var(--left);font-size:var(--size);opacity:var(--opacity);filter:drop-shadow(0 2px 3px #160c08aa);animation:leaf-fall var(--duration) linear var(--delay) infinite;will-change:transform}
 @keyframes leaf-fall{0%{transform:translate3d(0,-12vh,0) rotate(0deg)}25%{transform:translate3d(35px,25vh,0) rotate(100deg)}50%{transform:translate3d(-25px,52vh,0) rotate(210deg)}75%{transform:translate3d(30px,78vh,0) rotate(300deg)}100%{transform:translate3d(-15px,115vh,0) rotate(420deg)}}
 @media(prefers-reduced-motion:reduce){.falling-leaf{animation:none;display:none}}
+
+/* Reproductor y dedicatoria de la sección Amor */
+.song-card{width:min(100%,680px);margin:2.5rem auto 0;text-align:left}
+.song-kicker,.dedication-label{font-size:.68rem;letter-spacing:.22em;color:#e4c69a;text-align:center}
+.spotify-player{display:block;width:100%;min-width:280px;height:152px;border:0;border-radius:12px;margin:1rem auto 2rem}
+.dedication{padding:clamp(1.2rem,4vw,2rem);border:1px solid #8f6949;border-radius:18px;background:linear-gradient(145deg,#38251bde,#24170fe8);box-shadow:0 12px 35px #10090555}
+.dedication-label{margin:0 0 1.4rem}
+.dedication p:not(.dedication-label){font:400 clamp(1.15rem,3.5vw,1.35rem)/1.65 'Cormorant Garamond',serif;color:#f2dfc7;margin:0 0 1.1rem}
+.dedication p:last-child{margin-bottom:0}
