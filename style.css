@@ -27,3 +27,7 @@
 .memory-photos{display:grid;grid-template-columns:1fr;gap:.8rem;order:2}
 .memory-photos img{height:clamp(180px,25vw,260px);width:100%;object-fit:cover}
 @media(max-width:640px){.memory-card-pair{grid-template-columns:1fr}.memory-card-pair .memory-photos{order:0}.memory-photos img{height:auto;max-height:360px;aspect-ratio:4/3}}
+
+/* Texto en varios párrafos para el tercer recuerdo */
+.memory-caption p{margin:0 0 1rem}
+.memory-caption p:last-child{margin-bottom:0}
