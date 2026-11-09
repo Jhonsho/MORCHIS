@@ -39,3 +39,20 @@ document.getElementById('photoFiles').addEventListener('change',event=>{
  });
  event.target.value='';
 });
+/* Hojas que caen continuamente por toda la página */
+(()=>{
+ const layer=document.querySelector('.falling-leaves');
+ if(!layer)return;
+ const leaves=['🍂','🍁','🍃'];
+ for(let i=0;i<19;i++){
+  const leaf=document.createElement('span');
+  leaf.className='falling-leaf';
+  leaf.textContent=leaves[i%leaves.length];
+  leaf.style.setProperty('--left',(Math.random()*100)+'%');
+  leaf.style.setProperty('--size',(14+Math.random()*17)+'px');
+  leaf.style.setProperty('--opacity',(0.38+Math.random()*0.42).toFixed(2));
+  leaf.style.setProperty('--duration',(12+Math.random()*17)+'s');
+  leaf.style.setProperty('--delay',(-Math.random()*28)+'s');
+  layer.appendChild(leaf);
+ }
+})();
