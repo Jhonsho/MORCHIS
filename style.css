@@ -21,3 +21,9 @@
 .memory-card img{display:block;width:100%;height:clamp(220px,34vw,360px);object-fit:cover;border-radius:12px;border:1px solid #a77b52}
 .memory-card p{margin:0;color:#f2dfc7;font:400 clamp(1.2rem,3vw,1.6rem)/1.65 'Cormorant Garamond',serif}
 @media(max-width:640px){.memory-card{grid-template-columns:1fr;gap:1rem}.memory-card:nth-child(even) img{order:0}.memory-card img{height:auto;max-height:360px;aspect-ratio:4/3}.memory-card p{font-size:1.3rem}}
+
+/* Recuerdo con dos fotografías agrupadas a la derecha */
+.memory-card-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.memory-photos{display:grid;grid-template-columns:1fr;gap:.8rem;order:2}
+.memory-photos img{height:clamp(180px,25vw,260px);width:100%;object-fit:cover}
+@media(max-width:640px){.memory-card-pair{grid-template-columns:1fr}.memory-card-pair .memory-photos{order:0}.memory-photos img{height:auto;max-height:360px;aspect-ratio:4/3}}
