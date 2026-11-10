@@ -3,7 +3,7 @@
 .falling-leaves{position:fixed;inset:0;z-index:30;overflow:hidden;pointer-events:none}
 .falling-leaf{position:absolute;top:-12vh;left:var(--left);font-size:var(--size);opacity:var(--opacity);filter:drop-shadow(0 2px 3px #160c08aa);animation:leaf-fall var(--duration) linear var(--delay) infinite;will-change:transform}
 @keyframes leaf-fall{0%{transform:translate3d(0,-12vh,0) rotate(0deg)}25%{transform:translate3d(35px,25vh,0) rotate(100deg)}50%{transform:translate3d(-25px,52vh,0) rotate(210deg)}75%{transform:translate3d(30px,78vh,0) rotate(300deg)}100%{transform:translate3d(-15px,115vh,0) rotate(420deg)}}
-@media(prefers-reduced-motion:reduce){.falling-leaf{animation:none;display:none}}
+@media(prefers-reduced-motion:reduce){.falling-leaf{animation-duration:32s;opacity:.28}}
 
 /* Reproductor y dedicatoria de la sección Amor */
 .song-card{width:min(100%,680px);margin:2.5rem auto 0;text-align:left}
@@ -47,3 +47,11 @@
 .birthday-letter p:not(.letter-ornament){font:500 clamp(1.18rem,2.6vw,1.48rem)/1.8 'Cormorant Garamond',serif;color:#3a281b;text-indent:1.2em;margin:0 0 1.25rem}
 .birthday-letter .letter-ornament{text-align:center;color:#9a7044;font:1.5rem 'Cormorant Garamond',serif;letter-spacing:.4em;margin:.3rem 0 1rem}
 @media(max-width:640px){.birthday-letter{padding:1.5rem 1.25rem}.birthday-letter h1{font-size:2.7rem}.birthday-letter p:not(.letter-ornament){font-size:1.2rem;line-height:1.75}}
+
+/* Caligrafía antigua y hojas otoñales visibles también sobre la carta */
+.birthday-letter h1{font-family:'UnifrakturMaguntia','Cormorant Garamond',serif;font-weight:400;letter-spacing:.015em;font-size:clamp(2.7rem,7.5vw,5rem);line-height:1.2}
+.birthday-letter p:not(.letter-ornament){font-family:'IM Fell English','Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.25rem,2.8vw,1.6rem);line-height:1.9}
+.birthday-letter .letter-ornament{font-family:'UnifrakturMaguntia','Cormorant Garamond',serif;font-size:2rem}
+.falling-leaves{z-index:80}
+.falling-leaf{animation-play-state:running!important}
+@media(max-width:640px){.birthday-letter h1{font-size:2.8rem}.birthday-letter p:not(.letter-ornament){font-size:1.27rem;line-height:1.8}}
