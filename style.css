@@ -31,3 +31,10 @@
 /* Texto en varios párrafos para el tercer recuerdo */
 .memory-caption p{margin:0 0 1rem}
 .memory-caption p:last-child{margin-bottom:0}
+
+/* Colección de audios en la sección Amor */
+.audio-collection{width:min(100%,680px);margin:2rem auto 0;padding:1.2rem clamp(1rem,3vw,1.6rem);border:1px solid #8f6949;border-radius:18px;background:linear-gradient(145deg,#38251bde,#24170fe8);box-shadow:0 12px 35px #10090555}
+.audio-collection>.song-kicker{margin:0 0 1.2rem}
+.audio-item{padding:1rem 0;border-top:1px solid #8f694966}
+.audio-item h2{margin:0 0 .65rem;color:#f2dfc7;font:500 1.45rem 'Cormorant Garamond',serif}
+.audio-item audio{display:block;width:100%;margin:0;accent-color:#d9b889}
