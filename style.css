@@ -38,3 +38,12 @@
 .audio-item{padding:1rem 0;border-top:1px solid #8f694966}
 .audio-item h2{margin:0 0 .65rem;color:#f2dfc7;font:500 1.45rem 'Cormorant Garamond',serif}
 .audio-item audio{display:block;width:100%;margin:0;accent-color:#d9b889}
+
+/* Carta de cumpleaños en la runa Vida: tipografía clásica y antigua */
+.life-letter{background:radial-gradient(ellipse at top,#513725,#21150f 72%);padding-bottom:clamp(3rem,8vw,6rem)}
+.birthday-letter{width:min(100%,820px);margin:1rem auto 0;padding:clamp(1.4rem,5vw,3.4rem);border:1px solid #b18a5b;border-radius:8px;background:linear-gradient(145deg,#f4e7cf,#e8d4b4);color:#3a281b;box-shadow:0 18px 55px #10090588;text-align:left;position:relative}
+.birthday-letter:before{content:"";position:absolute;inset:9px;border:1px solid #b18a5b88;pointer-events:none}
+.birthday-letter h1{font:600 clamp(2.5rem,7vw,4.5rem)/1.05 'Cormorant Garamond',serif;color:#56371f;text-align:center;margin:.4rem 0 2rem;text-shadow:0 1px #fff8e9}
+.birthday-letter p:not(.letter-ornament){font:500 clamp(1.18rem,2.6vw,1.48rem)/1.8 'Cormorant Garamond',serif;color:#3a281b;text-indent:1.2em;margin:0 0 1.25rem}
+.birthday-letter .letter-ornament{text-align:center;color:#9a7044;font:1.5rem 'Cormorant Garamond',serif;letter-spacing:.4em;margin:.3rem 0 1rem}
+@media(max-width:640px){.birthday-letter{padding:1.5rem 1.25rem}.birthday-letter h1{font-size:2.7rem}.birthday-letter p:not(.letter-ornament){font-size:1.2rem;line-height:1.75}}
